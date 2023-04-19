@@ -178,15 +178,16 @@
             this.dgvDados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDados.Location = new System.Drawing.Point(36, 421);
             this.dgvDados.Name = "dgvDados";
-            this.dgvDados.Size = new System.Drawing.Size(840, 274);
+            this.dgvDados.Size = new System.Drawing.Size(866, 316);
             this.dgvDados.TabIndex = 15;
+            this.dgvDados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDados_CellDoubleClick);
             // 
             // TelaFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(909, 707);
+            this.ClientSize = new System.Drawing.Size(914, 749);
             this.Controls.Add(this.dgvDados);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAtualizar);

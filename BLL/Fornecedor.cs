@@ -5,6 +5,8 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.SqlServer.Server;
+
 
 
 namespace BLL
@@ -23,7 +25,7 @@ namespace BLL
         {
             con = new Conexao();
             string sql = $"insert into tb_fornecedor values (null, " +
-                $"{Razao},{Cnpj},{Telefone},{Email})";
+                $"'{Razao}', '{Cnpj}', '{Telefone}', '{Email}')";
             return con.Executar(sql);
         }
         public bool Atualizar()
@@ -50,6 +52,23 @@ namespace BLL
                 dt = con.Retorna(sql);
                 return dt;
             }catch(Exception ex)
+            {
+                return new DataTable();
+            }
+        }
+        public DataTable PesquisarId()
+        {
+            try
+            {
+                con = new Conexao();
+                string sql = $"select from tb_fornecedor where " +
+                    $"forn_id={Id}";
+                DataTable dt = new DataTable();
+                dt = con.Retorna(sql);
+                return dt;
+
+            }
+            catch (Exception ex)
             {
                 return new DataTable();
             }

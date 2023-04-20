@@ -64,13 +64,13 @@ namespace Projeto3Camada
 
         private void dgvDados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            forn.Id = Convert.ToInt32(dgvDados["id", e.RowIndex].Value);
+            forn.Id = Convert.ToInt32(dgvDados["forn_id", e.RowIndex].Value);
             DataTable dt = forn.PesquisarId();
-            txtID.Text = dt.Rows[0][forn.Id].ToString();
-            mtxtCnpj.Text = dt.Rows[0][forn.Cnpj].ToString();
-            txtEmail.Text = dt.Rows[0][forn.Email].ToString();
-            txtRazaosocial.Text = dt.Rows[0][forn.Razao].ToString();
-            mtxtTelefone.Text = dt.Rows[0][forn.Telefone].ToString();
+            txtID.Text = dt.Rows[0]["forn_id"].ToString();
+            mtxtCnpj.Text = dt.Rows[0]["forn_cnpj"].ToString();
+            txtEmail.Text = dt.Rows[0]["forn_email"].ToString();
+            txtRazaosocial.Text = dt.Rows[0]["forn_razao"].ToString();
+            mtxtTelefone.Text = dt.Rows[0]["forn_telefone"].ToString();
         }
     }
 }

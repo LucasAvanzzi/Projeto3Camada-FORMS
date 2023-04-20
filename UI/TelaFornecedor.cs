@@ -45,7 +45,7 @@ namespace Projeto3Camada
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
             forn = new Fornecedor();
-            forn.Id = int.Parse(txtID.Text);
+         // forn.Id = int.Parse(txtID.Text);
             forn.Cnpj = mtxtCnpj.Text;
             forn.Email = txtEmail.Text;
             forn.Telefone = mtxtTelefone.Text;
